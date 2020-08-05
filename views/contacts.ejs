@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>Home</title>
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<style>
+    body,html{
+background: #7F7FD5;
+background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+height: 100%;
+}
+
+.card{
+    background-color: rgba(0,0,0,0.4) !important;
+}
+
+.white{
+    color :white;
+}
+
+a.white{
+    color: #7F7FD5;
+}
+
+</style>
+
+
+</head>
+    <body class="d-flex">
+        <div class="container mt-4 card my-auto">
+            <h5 class="card-header info-color white-text text-center py-4">
+              <input type="text" />
+            </h5>
+          
+            <!--Card content-->
+            <div class="card-body mt-3 px-lg-5 pt-0">
+                <% contacts.forEach( (contact, index) => { %>
+                    <div class="row my-3">
+                        <div class="col-md-9 mx-auto">
+                            <h5 class="float-left"><%= contact.username %></h5>
+                            <a style="text-decoration: none;" class="float-right mr-5 btn btn-light" href="#">Chat Now</a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+          
+          </div>
+    </body>
+</html>

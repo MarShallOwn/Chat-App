@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>Home</title>
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<style>
+    body,html{
+background: #7F7FD5;
+background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+height: 100%;
+font-size: 35px;
+}
+
+.card{
+    background-color: rgba(0,0,0,0.4) !important;
+}
+
+.white{
+    color :white;
+}
+
+a.white{
+    color: #7F7FD5;
+}
+
+</style>
+
+
+</head>
+    <body>
+        <div  class="container d-flex text-center justify-content-center align-items-center h-100">
+            <% if(user){ %>
+                <%= user.username %>
+                <a class="ml-3" href="/chat">Chat</a>
+                <form action="/logout?_method=DELETE" method="POST" >
+                <button class="ml-5">Logout</button>
+                </form>
+                <% }else{ %>
+                <a href="/login">login</a>
+                <a class="ml-5" href="/register">register</a>
+                <% } %>
+        </div>
+    </body>
+
+</html>
